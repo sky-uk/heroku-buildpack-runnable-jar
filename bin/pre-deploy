@@ -7,4 +7,6 @@ if [ ! -f application.jar ]; then
     exit 1
 fi
 
+env
+
 java $JAVA_OPTS -jar application.jar pre-deploy
