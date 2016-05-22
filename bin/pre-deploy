@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. manifest.sh 
+
 if [ ! -f application.jar ]; then
     echo "Couldn't find application.jar"
     exit 1
