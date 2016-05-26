@@ -6,7 +6,8 @@ BUILD_DIR=$1
 cat <<EOF
 ---
 config_vars:
-  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
-
+  JAVA_OPTS: -Xmx2048m -Xss512k -XX:+UseCompressedOops
+default_process_types:
+  web: java $JAVA_OPT -DCATALOGUE_PORT=80 -DBASKET_PORT=80 -jar appication.jar
 
 EOF
