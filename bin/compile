@@ -34,6 +34,8 @@ install_java ${BUILD_DIR} ${javaVersion}
 jdk_overlay ${BUILD_DIR}
 echo "done"
 
+${BUILD_DIR}/.jdk/jre/bin/keytool -import -alias bskyb -file ${BIN_DIR}/bskyb.der -keystore ${BUILD_DIR}/.jdk/jre/lib/security/cacerts -storepass changeit -noprompt
+
 if [ ! -d $CACHE_DIR ] ; then
   mkdir $CACHE_DIR
 fi
